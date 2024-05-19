@@ -1,0 +1,53 @@
+package com.example.day11;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SayaActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_saya);
+        setContentView(R.layout.activity_bayar);
+        ImageButton imb1 = findViewById(R.id.imb1);
+        ImageButton imb2 = findViewById(R.id.imb2);
+        ImageButton imb3 = findViewById(R.id.imb3);
+        ImageButton imb4 = findViewById(R.id.imb4);
+
+        imb1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SayaActivity.this, BerandaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imb2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SayaActivity.this, SejarahActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imb3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SayaActivity.this, BayarActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imb4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SayaActivity.this, SayaActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+}
